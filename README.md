@@ -25,6 +25,20 @@ git clone https://github.com/elheffe80/pfsense-backup-extractinator.git
 2. Move pfsense backup xml to that directory and rename to config.xml
 3. ```python3 extract_staticmap.py```
 
+Output should look like:
+
+| MAC Address       | IP Address     | Hostname         | Notes                          |
+| ----------------- | -------------- | ---------------- | ------------------------------ |
+| 08:00:27:1F:2D:3E | 10.0.0.101     | server1        | Primary database server       |
+| 00:16:3E:FF:AA:BB | 10.0.0.102     | server2        | Backup server                 |
+| 52:54:00:12:34:56 | 10.0.0.103     | workstation1   | Design workstation            |
+| 52:54:00:65:43:21 | 10.0.0.104     | workstation2   | Test workstation              |
+
+- MAC Address - The MAC address used for the DHCP lease.
+- IP Address - The IP address given in the lease.
+- Hostname - this is the hostname, extracted from the hostname key.
+- Notes - this is whatever information was contained within the description field.
+
 ## TODO
 
 - [ ] Pass XML file as a variable (allowing custom file paths)
