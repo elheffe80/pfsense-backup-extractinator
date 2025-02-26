@@ -41,6 +41,8 @@ Output should look like:
 
 ## TODO
 
+- [ ] Simultaneously export csv of just MAC and IP
+- [ ] Create python script to export to OpnSense
 - [ ] Pass XML file as a variable (allowing custom file paths)
 - [ ] Create a parent script to manage multiple extract tasks
 - [ ] Create a NAT extract script
